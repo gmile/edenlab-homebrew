@@ -11,6 +11,7 @@ class Health < Formula
   depends_on "kubernetes-cli"
 
   def install
-    bin.install 'check_stuff'
+    bin.install 'health'
+    bin.install_symlink 'logs_per_microservice'
   end
 end
