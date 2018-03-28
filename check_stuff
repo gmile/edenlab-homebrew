@@ -1,3 +1,23 @@
-#!/usr/local/bin/bash
+#!/usr/local/bin/fish
 
-echo "hi!"
+set date $argv[1]
+
+set es_query '{
+  "aggs": {
+    "queries": {
+      "terms": {
+        "field": "kubernetes.container_name.keyword"
+      }
+    }
+  },
+  "size": 0
+}'
+
+set jq_query ''
+
+
+
+set command curl --silent --request GET "http://localhost:9200/logstash-$date/_search" -d "'$es_query'"
+
+# echo $command - TODO: only if verbose mode on
+eval $command | jq '.aggregations.queries.buckets' | jq '(.[0] | keys_unsorted) as $keys | $keys, map([.[ $keys[] ]])[] | @csv' --raw-output | xsv table
