@@ -1,2 +1,3 @@
 #!/usr/local/bin/fish
 
+logs_per_microservice

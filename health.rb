@@ -12,6 +12,6 @@ class Health < Formula
 
   def install
     bin.install 'health'
-    bin.install_symlink 'logs_per_microservice'
+    bin.install 'logs_per_microservice'
   end
 end
