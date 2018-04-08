@@ -3,6 +3,9 @@ class Health < Formula
   homepage ""
   url "https://github.com/gmile/edenlab-homebrew.git"
   version "0.1.0"
+  head "https://github.com/andsens/homeshick.git"
+
+  bottle :unneeded
 
   depends_on "fish"
   depends_on "curl"
