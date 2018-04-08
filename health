@@ -8,5 +8,5 @@ switch $subcommand
   case c
     __health_c
   case *
-    return 1
+    echo "nothing"
 end
