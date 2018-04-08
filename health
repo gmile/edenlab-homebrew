@@ -1,20 +1,8 @@
 #!/usr/local/bin/fish
 
 function health --argument-names subcommand
-  set directory (cd (dirname (status -f)); and pwd)
-
-  set available_subcommands (string join "\n" a b c)
-
-  set param_given (string length $argv[1])
-
-  if [ (count $param_given) -eq 0 ]
-    echo -e "Subcommand is not given. Available subcommands:\n\n$available_subcommands"
-    return 1
-  end
-
   switch $subcommand
     case a
-      source $directory"/scripts/a.fish"
       a
     case b
       b
