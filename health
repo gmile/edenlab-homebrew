@@ -1,6 +1,6 @@
 #!/usr/local/bin/fish
 
-switch $subcommand
+switch $argv[1]
   case a
     __health_a
   case b
