@@ -15,7 +15,7 @@ class Health < Formula
 
   def install
     fish_function.install "scripts/a.fish"
-    fish_function.install "health"
+    bin.install "health"
     # bin.install 'health'
     # bin.install 'logs_per_microservice'
   end
