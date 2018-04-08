@@ -1,14 +1,12 @@
 #!/usr/local/bin/fish
 
-function health --argument-names subcommand
-  switch $subcommand
-    case a
-      __health_a
-    case b
-      __health_b
-    case c
-      __health_c
-    case *
-      return 1
-  end
+switch $subcommand
+  case a
+    __health_a
+  case b
+    __health_b
+  case c
+    __health_c
+  case *
+    return 1
 end
