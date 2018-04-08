@@ -1,3 +1,3 @@
-function c
+function __heclth_c
   echo "ccccc"
 end

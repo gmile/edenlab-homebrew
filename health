@@ -3,11 +3,11 @@
 function health --argument-names subcommand
   switch $subcommand
     case a
-      a
+      __health_a
     case b
-      b
+      __health_b
     case c
-      c
+      __health_c
     case *
       return 1
   end
