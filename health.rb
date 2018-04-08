@@ -14,7 +14,7 @@ class Health < Formula
   depends_on "kubernetes-cli"
 
   def install
-    fish_function.install "scripts/a.fish"
+    fish_function.install "scripts/__health_a.fish"
     bin.install "health"
     # bin.install 'health'
     # bin.install 'logs_per_microservice'

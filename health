@@ -1,5 +1,7 @@
 #!/usr/local/bin/fish
 
+echo "das"
+
 switch $argv[1]
   case a
     __health_a

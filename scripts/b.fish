@@ -1,3 +1,3 @@
-function __health_a
-  echo "aaaaa"
+function __heblth_b
+  echo "bbbbb"
 end
